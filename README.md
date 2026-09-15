@@ -2,7 +2,7 @@
 
 ManageMyExpenses is a feature-rich Android expense management application designed to help users track their daily expenses, manage budgets, monitor spending patterns, and keep their financial information organized.
 
-The application provides a simple and user-friendly interface with authentication, expense tracking, budget management, analytics, alerts, and profile management.
+The application provides a simple and user-friendly interface with authentication, expense tracking, budget management, analytics and profile management.
 
 ---
 
@@ -21,7 +21,7 @@ The application focuses on making expense management simple, organized, and easy
 - Email and password authentication
 - Phone number verification using OTP
 - Firebase Authentication for secure user authentication
-- Password reset functionality
+
 
 ### 💸 Expense Management
 - Add and manage daily expenses
@@ -29,17 +29,6 @@ The application focuses on making expense management simple, organized, and easy
 - Organize expenses according to categories
 - View recorded expenses
 - Maintain personal expense records
-
-### 💰 Budget Management
-- Set a spending budget
-- Monitor budget usage
-- Track remaining budget
-- Helps users control unnecessary spending
-
-### 🚨 Budget Alerts
-- Monitor spending against the set budget
-- Alert users when spending approaches the budget limit
-- Helps prevent unnecessary overspending
 
 ### 📊 Analytics
 - Analyze spending patterns
@@ -59,7 +48,7 @@ The application focuses on making expense management simple, organized, and easy
 ### ⚙️ Preferences
 - Notification settings
 - Dark mode option
-- User-specific settings stored locally
+
 
 ---
 
@@ -109,36 +98,61 @@ Main sections of the application include:
 - Expense Management
 - Analytics
 - Profile
-- Budget Management
 - Security & Authentication
 
 ---
 
-## 🔄 Application Workflow
+**##Aplication Workflow**
 
-```text
-                    ┌───────────────┐
-                    │  Splash Screen│
-                    └───────┬───────┘
+
+                    ┌─────────────────┐
+                    │  Splash Screen  │
+                    │      Logo       │
+                    └────────┬────────┘
+                             ↓
+                  ┌─────────────────────┐
+                  │ Firebase Auth Check │
+                  └─────────┬───────────┘
+                            ↓
+                 ┌──────────────────────┐
+                 │   Login / Sign Up    │
+                 └──────────┬───────────┘
                             │
-                 ┌──────────┴──────────┐
-                 │                     │
-            User Logged In       New / Logged Out
-                 │                     │
-                 ▼                     ▼
-            Main Activity         Login / Sign Up
-                 │                     │
-                 │              Authentication
-                 │                     │
-                 └──────────┬──────────┘
-                            ▼
-                         Home
+                    ┌───────┴────────┐
+                    ↓                ↓
+                  Login          Sign Up
+                    │                │
+                    │          User Details
+                    │                ↓
+                    │        Phone OTP Verification
+                    │                ↓
+                    │          Create Account
+                    │                │
+                    └───────┬────────┘
+                            ↓
+                       ┌─────────┐
+                       │  Home   │
+                       └────┬────┘
                             │
-             ┌──────────────┼──────────────┐
-             │              │              │
-             ▼              ▼              ▼
-          Expenses       Analytics       Profile
-             │              │              │
-             ▼              ▼              ▼
-          Budget         Spending       Settings
-          & Alerts       Analysis       & Security
+              ┌─────────────┼─────────────┐
+              ↓             ↓             ↓
+        ┌───────────┐ ┌───────────┐ ┌───────────┐
+        │  Expenses │ │ Analytics │ │  Profile  │
+        └─────┬─────┘ └─────┬─────┘ └─────┬─────┘
+              ↓             ↓             ↓
+         Add / View      Spending      Personal
+          Expenses        Analysis     Information
+              ↓                           ↓
+         Categories                  Preferences
+                                          ↓
+                                      Security
+                                          ↓
+                                        Logout
+
+              ↓             ↓             ↓
+              └─────────────┴─────────────┘
+                            ↓
+                   ┌─────────────────┐
+                   │    Firestore    │
+                   │  User Data      │
+                   └─────────────────┘
