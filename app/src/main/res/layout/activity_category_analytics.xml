@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8EF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="‹  Back"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#625B83"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Category Analytics"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="See where your money is going"
+            android:textSize="14sp"
+            android:textColor="#8B8494"/>
+
+        <!-- TOTAL -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="110dp"
+            android:layout_marginTop="24dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:background="@drawable/balance_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Expense"
+                android:textSize="14sp"
+                android:textColor="#EDEAF5"/>
+
+            <TextView
+                android:id="@+id/txtTotalExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="₹ 0.00"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+        <!-- CATEGORY -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Category-wise Expenses"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <LinearLayout
+            android:id="@+id/layoutCategories"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical"/>
+
+        <!-- SMART INSIGHT -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:text="Smart Insight"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <TextView
+            android:id="@+id/txtSmartInsight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="18dp"
+            android:text="Your spending insight will appear here."
+            android:textSize="15sp"
+            android:textColor="#514B70"
+            android:background="@drawable/rounded_white"/>
+
+        <!-- CHART BUTTONS -->
+
+        <Button
+            android:id="@+id/btnPieChart"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="22dp"
+            android:text="View Spending Distribution"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:backgroundTint="#625B83"/>
+
+        <Button
+            android:id="@+id/btnBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="10dp"
+            android:text="Compare Categories"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#625B83"
+            android:backgroundTint="#625B83"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

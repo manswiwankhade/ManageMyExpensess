@@ -1,0 +1,350 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8EF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- HEADER -->
+
+        <TextView
+            android:id="@+id/txtBack"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:gravity="center_vertical"
+            android:text="‹  Back"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#625B83"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:text="Spending Trends"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Track how your spending has changed over the last six months"
+            android:textSize="14sp"
+            android:textColor="#8B8494"/>
+
+
+        <!-- SUMMARY CARDS -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:orientation="horizontal">
+
+            <!-- TOTAL -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/rounded_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="6-MONTH TOTAL"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="₹0.00"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+            </LinearLayout>
+
+
+            <!-- AVERAGE -->
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="105dp"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="12dp"
+                android:background="@drawable/rounded_white">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="MONTHLY AVERAGE"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtAverage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="6dp"
+                    android:text="₹0.00"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- CHART CARD -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="520dp"
+            android:layout_marginTop="18dp"
+            android:orientation="vertical"
+            android:padding="14dp"
+            android:background="@drawable/rounded_white"
+            android:elevation="2dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last 6 Months"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="Monthly expense comparison"
+                android:textSize="12sp"
+                android:textColor="#8B8494"/>
+
+            <com.example.expensemanager.BarChartView
+                android:id="@+id/barChart"
+                android:layout_width="match_parent"
+                android:layout_height="450dp"
+                android:layout_marginTop="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- MONTH HIGHLIGHTS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Spending Highlights"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <!-- HIGHEST -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="↑"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#D95F59"
+                android:background="#FBE9E7"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Highest spending"
+                    android:textSize="12sp"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtHighestMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Sep • ₹0"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- LOWEST -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="↓"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="#4C9A72"
+                android:background="#E8F5EE"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Lowest spending"
+                    android:textSize="12sp"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtLowestMonth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Apr • ₹0"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- TREND -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="16dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="42dp"
+                android:layout_height="42dp"
+                android:gravity="center"
+                android:text="↗"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#625B83"
+                android:background="#EEEAF5"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recent trend"
+                    android:textSize="12sp"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtTrend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="→ No spending change"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- SMART INSIGHT -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Smart Insight"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <TextView
+            android:id="@+id/txtSmartInsight"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:padding="18dp"
+            android:text="Your spending insight will appear here."
+            android:textSize="14sp"
+            android:lineSpacingExtra="3dp"
+            android:textColor="#514B70"
+            android:background="@drawable/rounded_white"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="30dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F4EDF8"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="18dp"
+        android:paddingEnd="18dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="30dp">
+
+        <!-- TOP HEADER -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="8dp">
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:layout_width="wrap_content"
+                android:layout_height="42dp"
+                android:gravity="center_vertical"
+                android:text="‹  Back"
+                android:textSize="17sp"
+                android:textStyle="bold"
+                android:textColor="#625B83"
+                android:paddingStart="4dp"
+                android:paddingEnd="15dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Spending Distribution"
+                android:textSize="29sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:text="A visual look at where your money goes"
+                android:textSize="14sp"
+                android:textColor="#81788F"/>
+
+        </LinearLayout>
+
+
+        <!-- TOTAL + AVERAGE -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="96dp"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/rounded_white"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOTAL SPENDING"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtTotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="₹0.00"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="All recorded spending"
+                    android:textSize="9sp"
+                    android:textColor="#A39AAA"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="10dp"
+                android:background="@drawable/rounded_white"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="DAILY AVERAGE"
+                    android:textSize="10sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtAverage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="₹0.00"
+                    android:textSize="21sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Based on your spending"
+                    android:textSize="9sp"
+                    android:textColor="#A39AAA"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- PIE CHART -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="8dp"
+            android:background="#FFFFFF"
+            android:elevation="4dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:background="#F0E8F6">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Where Did My Money Go?"
+                    android:textSize="19sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Category-wise spending distribution"
+                    android:textSize="11sp"
+                    android:textColor="#81788F"/>
+
+            </LinearLayout>
+
+
+            <com.example.expensemanager.PieChartView
+                android:id="@+id/pieChart"
+                android:layout_width="match_parent"
+                android:layout_height="350dp"
+                android:layout_marginTop="2dp"/>
+
+
+            <!-- CATEGORY COLOR LEGEND -->
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:paddingStart="8dp"
+                android:text="Category Colors"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <LinearLayout
+                android:id="@+id/layoutLegend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:orientation="vertical"
+                android:paddingStart="8dp"
+                android:paddingEnd="8dp"
+                android:paddingBottom="8dp"/>
+
+        </LinearLayout>
+
+
+        <!-- SPENDING HIGHLIGHTS -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Spending Highlights"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="A quick summary of your spending pattern"
+            android:textSize="12sp"
+            android:textColor="#81788F"/>
+
+
+        <!-- HIGHLIGHT CARDS -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="112dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginEnd="6dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#FFFFFF"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOP CATEGORY"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtHighestCategory"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="7dp"
+                    android:text="Food &amp; Dining"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"
+                    android:maxLines="2"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="Highest spending"
+                    android:textSize="9sp"
+                    android:textColor="#A39AAA"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginStart="6dp"
+                android:orientation="vertical"
+                android:gravity="center_vertical"
+                android:padding="15dp"
+                android:background="#FFFFFF"
+                android:elevation="3dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="LARGEST SHARE"
+                    android:textSize="9sp"
+                    android:textStyle="bold"
+                    android:textColor="#8B8494"/>
+
+                <TextView
+                    android:id="@+id/txtHighestPercentage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:text="0%"
+                    android:textSize="25sp"
+                    android:textStyle="bold"
+                    android:textColor="#625B83"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
+                    android:text="Of total spending"
+                    android:textSize="9sp"
+                    android:textColor="#A39AAA"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- SMART INSIGHT -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:text="Smart Spending Insight"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="17dp"
+            android:background="#FFFFFF"
+            android:elevation="3dp">
+
+            <TextView
+                android:layout_width="44dp"
+                android:layout_height="44dp"
+                android:gravity="center"
+                android:text="✦"
+                android:textSize="21sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:background="#625B83"/>
+
+            <TextView
+                android:id="@+id/txtPieInsight"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="14dp"
+                android:text="Your spending insight will appear here."
+                android:textSize="14sp"
+                android:lineSpacingExtra="3dp"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

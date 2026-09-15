@@ -1,0 +1,443 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8EF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <!-- Header -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/txtBack"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:gravity="center"
+                android:text="←"
+                android:textSize="27sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"
+                android:background="@drawable/rounded_white"/>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical"
+                android:layout_marginStart="15dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Daily Expenses"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:textColor="#514B70"/>
+
+                <TextView
+                    android:id="@+id/txtDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:text="14 September 2026"
+                    android:textSize="13sp"
+                    android:textColor="#8B8494"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+        <!-- Total Spent Card -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:padding="22dp"
+            android:background="@drawable/balance_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total Spent Today"
+                android:textSize="14sp"
+                android:textColor="#EDEAF5"/>
+
+            <TextView
+                android:id="@+id/txtTotalSpent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="₹ 0.00"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+            <TextView
+                android:id="@+id/txtTransactionCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="0 transactions today"
+                android:textSize="13sp"
+                android:textColor="#EDEAF5"/>
+
+        </LinearLayout>
+
+
+        <!-- Pie Chart Section -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Where did your money go?"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="@drawable/rounded_white">
+
+            <!-- Pie Chart will be added here -->
+
+            <TextView
+                android:id="@+id/txtChartPlaceholder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📊"
+                android:textSize="55sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="Daily spending chart"
+                android:textSize="14sp"
+                android:textColor="#8B8494"/>
+
+        </LinearLayout>
+
+
+        <!-- Breakdown -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Today's Breakdown"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <!-- Food -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="🍔"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Food"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtFood"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Transport -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="🚌"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Transport"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtTransport"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Education -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="📚"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Education"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtEducation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Shopping -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="🛍️"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Shopping"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtShopping"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Entertainment -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="🎬"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Entertainment"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtEntertainment"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Health -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="💊"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Health"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtHealth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Other -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:gravity="center"
+                android:text="📦"
+                android:textSize="21sp"
+                android:background="@drawable/icon_circle"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginStart="12dp"
+                android:text="Other"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+            <TextView
+                android:id="@+id/txtOther"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="₹ 0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- Bottom spacing -->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="25dp"/>
+
+    </LinearLayout>
+
+</ScrollView>

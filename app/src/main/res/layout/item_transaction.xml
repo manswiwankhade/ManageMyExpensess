@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="14dp"
+    android:layout_marginBottom="8dp"
+    android:background="@drawable/transaction_card"
+    android:gravity="center_vertical">
+
+    <TextView
+        android:id="@+id/txtTransactionIcon"
+        android:layout_width="48dp"
+        android:layout_height="43dp"
+        android:background="#F0ECF8"
+        android:gravity="center"
+        android:text="💸"
+        android:textSize="23sp" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:layout_marginStart="12dp">
+
+        <TextView
+            android:id="@+id/txtTransactionCategory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Food or Dining"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+        <TextView
+            android:id="@+id/txtTransactionNote"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="Lunch"
+            android:textSize="13sp"
+            android:textColor="#8B8494"/>
+
+        <TextView
+            android:id="@+id/txtTransactionDetails"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:text="14 Sep 2026 • UPI"
+            android:textSize="12sp"
+            android:textColor="#AAA3B0"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/txtTransactionAmount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- ₹250.00"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="#514B70"
+        android:layout_marginStart="8dp"/>
+
+</LinearLayout>

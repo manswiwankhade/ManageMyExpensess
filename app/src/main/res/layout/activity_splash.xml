@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="30dp"
+    android:background="@color/cream">
+
+
+    <!-- Logo -->
+
+    <TextView
+        android:layout_width="113dp"
+        android:layout_height="105dp"
+        android:background="@drawable/logo"
+        android:gravity="center"
+
+        android:textColor="#5B557D"
+        android:textSize="58sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:text="ManageMyExpenses"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#514B70"/>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Track • Manage • Save"
+        android:textSize="14sp"
+        android:textColor="#514B70"/>
+
+</LinearLayout>

@@ -1,0 +1,281 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8EF"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="30dp">
+
+
+        <!-- ================================================= -->
+        <!-- HEADER -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:id="@+id/txtBackAnalytics"
+            android:layout_width="wrap_content"
+            android:layout_height="42dp"
+            android:gravity="center_vertical"
+            android:text="‹  Back"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#625B83"
+            android:clickable="true"
+            android:focusable="true"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:text="Spending Analytics"
+            android:textSize="29sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="Understand where your money goes"
+            android:textSize="14sp"
+            android:textColor="#8B8494"/>
+
+
+        <!-- ================================================= -->
+        <!-- TODAY -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Today"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Today's spending"
+                android:textSize="12sp"
+                android:textColor="#8B8494"/>
+
+            <TextView
+                android:id="@+id/txtTodayExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="₹ 0.00"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- THIS WEEK -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="This Week"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This week's spending"
+                android:textSize="12sp"
+                android:textColor="#8B8494"/>
+
+            <TextView
+                android:id="@+id/txtWeekExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="₹ 0.00"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- THIS MONTH -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="This Month"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="105dp"
+            android:layout_marginTop="8dp"
+            android:orientation="vertical"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/balance_card">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total spending this month"
+                android:textSize="12sp"
+                android:textColor="#EDEAF5"/>
+
+            <TextView
+                android:id="@+id/txtMonthExpense"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="₹ 0.00"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- TRANSACTIONS -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="🧾"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/txtTransactionCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Transactions this month: 0"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- AVERAGE -->
+        <!-- ================================================= -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:background="@drawable/rounded_white">
+
+            <TextView
+                android:layout_width="40dp"
+                android:layout_height="wrap_content"
+                android:text="📊"
+                android:textSize="22sp"/>
+
+            <TextView
+                android:id="@+id/txtAverageExpense"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Average daily spending: ₹0.00"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="#514B70"/>
+
+        </LinearLayout>
+
+
+        <!-- ================================================= -->
+        <!-- NEXT PAGE -->
+        <!-- ================================================= -->
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:text="Detailed Analysis"
+            android:textSize="19sp"
+            android:textStyle="bold"
+            android:textColor="#514B70"/>
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:text="View category-wise and monthly spending patterns on the next page."
+            android:textSize="13sp"
+            android:textColor="#8B8494"/>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="20dp"/>
+
+    </LinearLayout>
+
+</ScrollView>
